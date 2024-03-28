@@ -45,8 +45,7 @@ class VideoRecorderThread(Thread):
 
     def stop(self):
         self.running = False
-        # 필요한 경우 추가적인 종료 로직을 작성합니다.
-        
+    
 def add_info_to_frame(frame, fps, obd_error_shown, obd_connected, obd_connection):
     current_time = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     cv2.putText(frame, current_time, (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 0.6, (0, 255, 0), 2)
